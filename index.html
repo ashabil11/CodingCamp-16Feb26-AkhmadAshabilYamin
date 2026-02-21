@@ -7,13 +7,50 @@
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <header></header>
+<body >
+    <header>
+        <h1 class="text-2xl font-bold">ToDo List</h1>
+    </header>
 
-    <main></main>
+    <main class="border p-3 rounded bg-gray-300" >
+        <section>
+            <form>
+                <input class="border p-1.5 rounded" type="text" id="todo-input" placeholder="Enter a new todo item">
 
-    <footer></footer>
+                <input class="border p-1.5 rounded" type="date" id="todo-date" placeholder="Enter due date">
+            </form>
+            <br>
+            <div style="text-align: center;">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded justify" onclick="addTodo()" type="button">Add ToDo</button>
+            </div>
+            
+        </section>
+
+        <section class="flex pt-2 justify-between">
+            <button class="border rounded p-2 bg-red-600 text-black">Clear All ToDos</button>
+
+            <button class="border rounded p-2 bg-green-600 text-white">Filter ToDos</button>
+
+        </section>
+
+        <section class="pt-2">
+            <header>
+                <h1 class="text-2xl font-semibold">LIST OF TODOS</h1>
+            </header>
+
+            <ul class="pt-2" id="todo-list">
+                <li>No todos available</li>
+            </ul>
+
+        </section>
+    </main>
+
+    <footer>
+        <p class="text-center text-gray-500 text-sm mt-4">2026 Todo List App. Ashabil Yamiin</p>
+    </footer>
 
     <!-- Javascript External -->
     <script src="js/script.js"></script>
